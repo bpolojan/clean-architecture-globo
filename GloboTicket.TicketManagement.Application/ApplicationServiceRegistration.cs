@@ -13,5 +13,5 @@ namespace GloboTicket.TicketManagement.Application
 
             return services;
         }
-    }
+    } 
 }

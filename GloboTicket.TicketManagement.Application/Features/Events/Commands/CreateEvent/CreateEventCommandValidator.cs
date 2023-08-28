@@ -37,7 +37,7 @@ namespace GloboTicket.TicketManagement.Application.Contracts.Features.Events.Com
                 .WithMessage("An event with the same name and date already exists.");
         }
 
-        // Custom Validation which will check 
+        // Custom Validation which will make custom check - Event Name And Date Are Unique
         private async Task<bool> EventNameAndDateUnique(CreateEventCommand e, CancellationToken token)
         {
             return !(await _eventRepository.IsEventNameAndDateUnique(e.Name, e.Date));
